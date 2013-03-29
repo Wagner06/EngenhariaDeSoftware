@@ -1,0 +1,57 @@
+﻿@model PortalBrazucas.noticias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>noticias</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idNoticia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idNoticia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usuarios.nomeUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usuarios.nomeUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tituloNoticia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tituloNoticia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.conteudoNoticia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.conteudoNoticia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fonteNoticia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fonteNoticia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.url_imagem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.url_imagem)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.idNoticia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

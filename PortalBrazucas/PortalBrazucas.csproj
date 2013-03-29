@@ -145,7 +145,12 @@
     <Compile Include="comentarios.cs">
       <DependentUpon>Modelos.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AnuncioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JogoController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
+    <Compile Include="Controllers\SelecaoController.cs" />
+    <Compile Include="Controllers\TabelaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="estadios.cs">
       <DependentUpon>Modelos.tt</DependentUpon>
@@ -313,6 +318,31 @@
     <Content Include="Views\Usuario\Create.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Delete.cshtml" />
+    <Content Include="Views\Selecao\Index.cshtml" />
+    <Content Include="Views\Selecao\Details.cshtml" />
+    <Content Include="Views\Selecao\Create.cshtml" />
+    <Content Include="Views\Selecao\Edit.cshtml" />
+    <Content Include="Views\Selecao\Delete.cshtml" />
+    <Content Include="Views\Noticia\Index.cshtml" />
+    <Content Include="Views\Noticia\Details.cshtml" />
+    <Content Include="Views\Noticia\Create.cshtml" />
+    <Content Include="Views\Noticia\Edit.cshtml" />
+    <Content Include="Views\Noticia\Delete.cshtml" />
+    <Content Include="Views\Anuncio\Index.cshtml" />
+    <Content Include="Views\Anuncio\Details.cshtml" />
+    <Content Include="Views\Anuncio\Create.cshtml" />
+    <Content Include="Views\Anuncio\Edit.cshtml" />
+    <Content Include="Views\Anuncio\Delete.cshtml" />
+    <Content Include="Views\Tabela\Index.cshtml" />
+    <Content Include="Views\Tabela\Details.cshtml" />
+    <Content Include="Views\Tabela\Create.cshtml" />
+    <Content Include="Views\Tabela\Edit.cshtml" />
+    <Content Include="Views\Tabela\Delete.cshtml" />
+    <Content Include="Views\Jogo\Index.cshtml" />
+    <Content Include="Views\Jogo\Details.cshtml" />
+    <Content Include="Views\Jogo\Create.cshtml" />
+    <Content Include="Views\Jogo\Edit.cshtml" />
+    <Content Include="Views\Jogo\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,6 +19,7 @@ namespace PortalBrazucas
         public string tituloAnuncio { get; set; }
         public string conteudoAnuncio { get; set; }
         public string url_imagem { get; set; }
+        public bool anuncioPublicado { get; set; }
     
         public virtual usuarios usuarios { get; set; }
     }

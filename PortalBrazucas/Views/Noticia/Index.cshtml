@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PortalBrazucas.noticias>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idNoticia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usuarios.nomeUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tituloNoticia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.conteudoNoticia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fonteNoticia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.url_imagem)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idNoticia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usuarios.nomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tituloNoticia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.conteudoNoticia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fonteNoticia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.url_imagem)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idNoticia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idNoticia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idNoticia })
+        </td>
+    </tr>
+}
+
+</table>

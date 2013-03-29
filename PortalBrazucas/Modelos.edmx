@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="bdportalModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="bdportalModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="bdportalModelStoreContainer">
           <EntitySet Name="anuncios" EntityType="bdportalModel.Store.anuncios" store:Type="Tables" Schema="bdportal" />
           <EntitySet Name="boloes" EntityType="bdportalModel.Store.boloes" store:Type="Tables" Schema="bdportal" />
@@ -80,6 +80,7 @@
           <Property Name="tituloAnuncio" Type="varchar" Nullable="false" MaxLength="128" />
           <Property Name="conteudoAnuncio" Type="text" Nullable="false" />
           <Property Name="url_imagem" Type="text" />
+          <Property Name="anuncioPublicado" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="boloes">
           <Key>
@@ -354,8 +355,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bdportalModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -435,6 +435,7 @@
           <Property Name="conteudoAnuncio" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
           <Property Name="url_imagem" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="usuarios" Relationship="bdportalModel.FK_idusuario" FromRole="anuncios" ToRole="usuarios" />
+          <Property Type="Boolean" Name="anuncioPublicado" Nullable="false" />
         </EntityType>
         <EntityType Name="boloes">
           <Key>
@@ -743,6 +744,7 @@
           <EntitySetMapping Name="anuncios">
             <EntityTypeMapping TypeName="bdportalModel.anuncios">
               <MappingFragment StoreEntitySet="anuncios">
+                <ScalarProperty Name="anuncioPublicado" ColumnName="anuncioPublicado" />
                 <ScalarProperty Name="idanuncio" ColumnName="idanuncio" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
                 <ScalarProperty Name="tituloAnuncio" ColumnName="tituloAnuncio" />
