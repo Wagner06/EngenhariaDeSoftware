@@ -11,7 +11,6 @@ namespace PortalBrazucas.Models
     {
         public Contexto(): base("Qualquer"){}
 
-        public DbSet<Pais> Paises { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

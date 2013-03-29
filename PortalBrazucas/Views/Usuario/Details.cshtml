@@ -1,0 +1,43 @@
+﻿@model PortalBrazucas.usuarios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>usuarios</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nomeUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nomeUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.emailUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.emailUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tiposusuario.descricaoTipoUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tiposusuario.descricaoTipoUsuario)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { Model.idUsuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

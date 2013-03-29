@@ -52,6 +52,8 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -127,23 +129,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anuncios.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PaisController.cs" />
+    <Compile Include="boloes.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cidades.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="comentarios.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="estadios.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="jogos.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelos.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelos.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Contexto.cs" />
-    <Compile Include="Models\Pais.cs" />
-    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="noticias.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="palpites.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="selecoes.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tabela.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tiposusuario.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuarios.cs">
+      <DependentUpon>Modelos.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +262,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <EntityDeploy Include="Modelos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Modelos.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelos.edmx</DependentUpon>
+      <LastGenOutput>Modelos.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelos.edmx.diagram">
+      <DependentUpon>Modelos.edmx</DependentUpon>
+    </Content>
+    <Content Include="Modelos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelos.edmx</DependentUpon>
+      <LastGenOutput>Modelos.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -240,10 +308,11 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pais\Index.cshtml" />
-    <Content Include="Views\Pais\Create.cshtml" />
-    <Content Include="Views\Pais\Edit.cshtml" />
-    <Content Include="Views\Pais\Delete.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -256,6 +325,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

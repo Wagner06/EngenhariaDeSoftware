@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PortalBrazucas.usuarios>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tiposusuario.descricaoTipoUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tiposusuario.descricaoTipoUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { item.idUsuario }) |
+            @Html.ActionLink("Details", "Details", new { item.idUsuario }) |
+            @Html.ActionLink("Delete", "Delete", new { item.idUsuario})
+        </td>
+    </tr>
+}
+
+</table>
