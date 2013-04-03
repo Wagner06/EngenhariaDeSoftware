@@ -1,0 +1,76 @@
+﻿@model PortalBrazucas.noticias
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>noticias</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idNoticia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idNoticia)
+            @Html.ValidationMessageFor(model => model.idNoticia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idUsuario, "usuarios")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("idUsuario", String.Empty)
+            @Html.ValidationMessageFor(model => model.idUsuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tituloNoticia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tituloNoticia)
+            @Html.ValidationMessageFor(model => model.tituloNoticia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.conteudoNoticia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.conteudoNoticia)
+            @Html.ValidationMessageFor(model => model.conteudoNoticia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fonteNoticia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fonteNoticia)
+            @Html.ValidationMessageFor(model => model.fonteNoticia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.url_imagem)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.url_imagem)
+            @Html.ValidationMessageFor(model => model.url_imagem)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PortalBrazucas.jogos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horarioJogo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estadios.nomeEstadio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.selecoes.nomeSelecao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.selecoes1.nomeSelecao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idJogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataJogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horarioJogo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadios.nomeEstadio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.selecoes.nomeSelecao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.selecoes1.nomeSelecao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

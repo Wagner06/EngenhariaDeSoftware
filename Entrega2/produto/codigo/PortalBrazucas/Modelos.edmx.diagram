@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cc4985160d34285b5ea50b085c99bdf" Name="Diagram1">
+        <EntityTypeShape EntityType="bdportalModel.anuncios" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.boloes" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.cidades" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.comentarios" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.estadios" Width="1.5" PointX="3.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.jogos" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.noticias" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.palpites" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.selecoes" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.tabela" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.tiposusuario" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdportalModel.usuarios" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="bdportalModel.FK_idusuario" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_bolao" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_selecao1" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_selecao2" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_noticia" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_Estadio" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_EquipeA" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_EquipeB" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_donoDaNoticia" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.FK_selecao" ManuallyRouted="false" />
+        <AssociationConnector Association="bdportalModel.idTipoUsuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
