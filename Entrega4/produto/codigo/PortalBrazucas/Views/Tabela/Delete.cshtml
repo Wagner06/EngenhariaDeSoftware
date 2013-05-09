@@ -1,0 +1,67 @@
+﻿@model PortalBrazucas.tabela
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tabela</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idTabela)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idTabela)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.selecoes.nomeSelecao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.selecoes.nomeSelecao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.vitoriasTabela)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.vitoriasTabela)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.derrotasTabela)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.derrotasTabela)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empatesTabela)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empatesTabela)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.golsMarcados)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.golsMarcados)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.golsSofridos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.golsSofridos)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,60 @@
+﻿@model PortalBrazucas.jogos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>jogos</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idJogo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idJogo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dataJogo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dataJogo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.horarioJogo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.horarioJogo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.estadios.nomeEstadio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.estadios.nomeEstadio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.selecoes.nomeSelecao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.selecoes.nomeSelecao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.selecoes1.nomeSelecao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.selecoes1.nomeSelecao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

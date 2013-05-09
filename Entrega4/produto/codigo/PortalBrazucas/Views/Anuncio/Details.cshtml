@@ -1,0 +1,57 @@
+﻿@model PortalBrazucas.anuncios
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>anuncios</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idanuncio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idanuncio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.usuarios.nomeUsuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.usuarios.nomeUsuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tituloAnuncio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tituloAnuncio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.conteudoAnuncio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.conteudoAnuncio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.url_imagem)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.url_imagem)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.anuncioPublicado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.anuncioPublicado)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
